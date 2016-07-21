@@ -332,7 +332,7 @@ int Cpp_Body_Writer::print_by_type(char *temp, const char **field){
 			sprintf(temp, MAP_PRINT, field[4], field[4]);
 			break;
 		default:
-			sprintf(temp, STRUCT_PRINT, field[4], field[4]);
+			sprintf(temp, STRUCT_PRINT, field[4]);
 			break;
 	}
 	return 0;

@@ -57,7 +57,7 @@ int MsgId_RW::write_to_h(){
 
 int MsgId_RW::write_to_h_head(FILE *fp){
 	char temp[256] = {};
-	sprintf(temp, HEAD_FILE_COMMENT, srcfile_.c_str(), srcfile_.c_str(), srcfile_.c_str());
+	sprintf(temp, HEAD_FILE_COMMENT, srcfile_.c_str(), srcfile_.c_str());
 	fputs(temp, fp);
 	return 0;
 }
@@ -91,9 +91,9 @@ int MsgId_RW::write_to_js(){
 }
 
 int MsgId_RW::write_to_js_head(FILE *fp){
-	char temp[256] = {};
-	sprintf(temp, COMMON_FILE_COMMENT, "JS file");
-	fputs(temp, fp);
+	//char temp[256] = {};
+	//sprintf(temp, COMMON_FILE_COMMENT, "JS file");
+	fputs(COMMON_FILE_COMMENT, fp);
 	return 0;
 }
 

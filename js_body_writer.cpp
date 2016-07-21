@@ -239,7 +239,7 @@ int Js_Body_Writer::deserialize_by_type(char *temp, const char **field, bool is_
 			}
 			break;
 		default:
-			sprintf(temp, JS_READ_STRUCT, FIELD4, field[0], FIELD4);
+			sprintf(temp, JS_READ_STRUCT, FIELD4);
 			break;
 	}
 	return 0;
