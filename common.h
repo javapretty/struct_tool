@@ -14,11 +14,9 @@
 #define SPLIT "\x09\x20.;\n"
 
 enum FILE_TYPE {
-	TYPE_SERVER = 0,
-	TYPE_CLIENT = 1,
-	TYPE_MSG_STRUCT = 2,
-	TYPE_GAME_STRUCT = 3,
-	TYPE_UNKNOW = 4
+	TYPE_MSG_STRUCT = 1,
+	TYPE_GAME_STRUCT = 2,
+	TYPE_UNKNOW = 3
 };
 
 char *get_string_field(char *dst, const char *src, int pos, const char *del = NULL);

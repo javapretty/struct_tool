@@ -25,11 +25,7 @@
 
 #define BASE_HEAD_INCLUDE "\n#include \"Block_Buffer.h\"\n"\
 						"#include \"boost/unordered_map.hpp\"\n"
-#define GAME_CLIENT_INCLUDE \
-	BASE_HEAD_INCLUDE \
-	"#include \"Game_Struct.h\"\n"
-#define GAME_SERVER_INCLUDE \
-	GAME_CLIENT_INCLUDE 
+#define MSG_STRUCT_INCLUDE "\n#include \"Game_Struct.h\"\n"
 
 #define HEAD_FILE_END "\n#endif\n"
 

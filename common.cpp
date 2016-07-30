@@ -75,11 +75,8 @@ int type_of_int(const char *type){
 }
 
 FILE_TYPE type_of_file(const char *filename){
-	if(!strncmp(filename, "Server_Message", 14)){
-		return TYPE_SERVER;
-	}
-	else if(!strncmp(filename, "Client_Message", 14)){
-		return TYPE_CLIENT;
+	if(!strncmp(filename, "Msg_Struct", 14)){
+		return TYPE_MSG_STRUCT;
 	}
 	else if(!strncmp(filename, "Game_Struct", 11)){
 		return TYPE_GAME_STRUCT;

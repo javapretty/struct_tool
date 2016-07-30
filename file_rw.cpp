@@ -79,12 +79,8 @@ int File_RW::write_to_h_head(FILE *fp){
 int File_RW::write_to_h_include(FILE *fp){
 	char temp[256] = {};
 	switch(type_of_file(dstfile_.c_str())){
-		case TYPE_SERVER:
-			sprintf(temp, GAME_SERVER_INCLUDE);
-			fputs(temp, fp);
-			break;
-		case TYPE_CLIENT:
-			sprintf(temp, GAME_CLIENT_INCLUDE);
+		case TYPE_MSG_STRUCT:
+			sprintf(temp, MSG_STRUCT_INCLUDE);
 			fputs(temp, fp);
 			break;
 		case TYPE_GAME_STRUCT:
