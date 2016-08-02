@@ -60,7 +60,7 @@ int MsgId_Define::write_to_h_msg(char *temp, FILE *fp){
 
 int MsgId_Define::write_to_js(FILE *fp){
 	std::string js_name = get_js_enum_name(msgidName_);
-	if(js_name == ""){
+	if (js_name == "") {
 		return -1;
 	}
 	char temp[256] = {};
