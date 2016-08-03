@@ -86,7 +86,7 @@
 #define RESET_ZERO "\t%s = 0;\n"
 #define JS_RESET_ZERO "\tthis.%s = 0;\n"
 
-#define JS_RESET_STRING "\tthis.%s = \"\"\n"
+#define JS_RESET_STRING "\tthis.%s = \"\";\n"
 
 #define RESET_CLEAR "\t%s.clear();\n"
 #define JS_RESET_CLEAR "\tthis.%s = new Array();\n"
