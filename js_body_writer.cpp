@@ -15,8 +15,9 @@ Js_Body_Writer::~Js_Body_Writer()
 
 int Js_Body_Writer::write_to_file(FILE *fp){
 	write_to_js_init(fp);
-	write_to_js_serialize(fp);
-	return write_to_js_deserialize(fp);
+	//write_to_js_serialize(fp);
+	//write_to_js_deserialize(fp);
+	return 0;
 }
 
 int Js_Body_Writer::write_to_js_init(FILE *fp){

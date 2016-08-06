@@ -156,7 +156,7 @@ int File_RW::write_to_js(){
 	FILE *fp = fopen(temp, "rb+");
 	if(fp == NULL){
 		fp = fopen(temp, "w");
-		write_to_js_head(fp);
+		//write_to_js_head(fp);
 	}
 	else {
 		fseek(fp, 0, SEEK_END);

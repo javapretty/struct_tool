@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 	else if(!strcmp("msg", argv[1])){
 		MsgId_RW msgidrw(argv[2], argv[3], argv[4]);
 		msgidrw.readFile();
-		msgidrw.write_to_h();
+		//msgidrw.write_to_h();
 		msgidrw.write_to_js();
 	}
 	else{

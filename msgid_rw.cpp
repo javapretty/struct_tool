@@ -91,9 +91,6 @@ int MsgId_RW::write_to_js(){
 }
 
 int MsgId_RW::write_to_js_head(FILE *fp){
-	//char temp[256] = {};
-	//sprintf(temp, COMMON_FILE_COMMENT, "JS file");
-	fputs(COMMON_FILE_COMMENT, fp);
 	return 0;
 }
 
