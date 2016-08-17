@@ -27,8 +27,6 @@ int type_of_int(const char *type);
 
 FILE_TYPE type_of_file(const char *filename);
 
-std::string get_js_enum_name(std::string msgName);
-
 std::string trans_to_base_name(std::string type);
 
 inline char *str_2_pchar(std::string str){

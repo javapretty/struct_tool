@@ -95,9 +95,15 @@ int MsgId_RW::write_to_js_head(FILE *fp){
 }
 
 int MsgId_RW::write_to_js_enum(FILE *fp){
+	std::string js_name = "Msg";
+	char temp[256] = {};
+	sprintf(temp, ENUM_JS_HEAD, js_name.c_str(), js_name.c_str());
+	fputs(temp, fp);
 	for(MSGIDDEFINES::iterator iter = msgIdDefines_.begin(); iter != msgIdDefines_.end(); iter++){
-		(*iter)->write_to_js(fp);
+		(*iter)->write_to_js(js_name, fp);
 	}
+	sprintf(temp, JS_STRUCT_END);
+	fputs(temp, fp);
 	return 0;
 }
 

@@ -58,21 +58,8 @@ int MsgId_Define::write_to_h_msg(char *temp, FILE *fp){
 	return 0;
 }
 
-int MsgId_Define::write_to_js(FILE *fp){
-	std::string js_name = get_js_enum_name(msgidName_);
-	if (js_name == "") {
-		return -1;
-	}
+int MsgId_Define::write_to_js(std::string js_name, FILE *fp){
 	char temp[256] = {};
-	sprintf(temp, ENUM_JS_HEAD, js_name.c_str(), js_name.c_str());
-	fputs(temp, fp);
-	write_to_js_msg(temp, js_name, fp);
-	sprintf(temp, JS_STRUCT_END);
-	fputs(temp, fp);
-	return 0;
-}
-
-int MsgId_Define::write_to_js_msg(char *temp, std::string js_name, FILE *fp){
 	for(uint i = 0; i < msgName_.size(); i++){
 		sprintf(temp, ENUM_JS_BODY, js_name.c_str(), msgName_[i].c_str(), msgId_[i].c_str(), comment_[i].c_str());
 		fputs(temp, fp);

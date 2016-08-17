@@ -14,10 +14,9 @@ public:
 	int readAttr(FILE *fp);
 	int setAttr();
 	int write_to_h(FILE *fp);
-	int write_to_js(FILE *fp);
-private:
 	int write_to_h_msg(char *temp, FILE *fp);
-	int write_to_js_msg(char *temp, std::string js_name, FILE *fp);
+
+	int write_to_js(std::string js_name, FILE *fp);
 private:
 	std::string msgidName_;
 	MSGNAME msgName_;

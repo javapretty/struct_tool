@@ -84,44 +84,6 @@ FILE_TYPE type_of_file(const char *filename){
 	return TYPE_UNKNOW;
 }
 
-std::string get_js_enum_name(std::string msgName){
-	std::string js_name;
-	if(!strncmp(msgName.c_str(), "Client_Master_Message", 21)){
-		js_name = "Msg_CM";
-	}
-	else if(!strncmp(msgName.c_str(), "Master_Client_Message", 21)){
-		js_name = "Msg_MC";
-	}
-	else if(!strncmp(msgName.c_str(), "Client_Game_Message", 19)){
-		js_name = "Msg_CG";
-	}
-	else if(!strncmp(msgName.c_str(), "Game_Client_Message", 19)){
-		js_name = "Msg_GC";
-	}
-	else if(!strncmp(msgName.c_str(), "Gate_Message", 19)){
-		js_name = "Msg_Gate";
-	}
-	else if(!strncmp(msgName.c_str(), "Game_DB_Message", 15)){
-		js_name = "Msg_GD";
-	}
-	else if(!strncmp(msgName.c_str(), "Master_DB_Message", 17)){
-		js_name = "Msg_MD";
-	}
-	else if(!strncmp(msgName.c_str(), "Game_Master_Message", 19)){
-		js_name = "Msg_GM";
-	}
-	else if(!strncmp(msgName.c_str(), "LOG_Message", 14)){
-		js_name = "Msg_Log";
-	}
-	else if(!strncmp(msgName.c_str(), "Active_Message", 14)){
-		js_name = "Msg_Active";
-	}
-	else {
-		js_name = "";
-	}
-	return js_name;
-}
-
 std::string trans_to_base_name(std::string type){
 	if(type == "int8" || type == "int16" || type == "int32" || type == "int64" ||
 		type == "uint8" || type == "uint16" || type == "uint32" || type == "uint64")

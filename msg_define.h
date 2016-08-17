@@ -5,7 +5,7 @@
 #include "cpp_head_writer.h"
 #include "cpp_body_writer.h"
 #include "js_body_writer.h"
-#include "Xml.h"
+#include "netlib/Xml.h"
 
 typedef std::vector<std::string> TYPENAME;
 typedef std::vector<std::string> SUBTYPE1;
