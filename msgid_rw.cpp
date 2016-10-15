@@ -77,7 +77,7 @@ int MsgId_RW::write_to_h_enum(FILE *fp){
 }
 
 int MsgId_RW::write_to_js(){
-	FILE *fp = fopen("JS/message.js", "w+");
+	FILE *fp = fopen("../js/message.js", "w+");
 	if(fp == NULL){
 		std::cout<<"Can not open the js file "<<dstfile_<<std::endl;
 		exit(0);
